@@ -1,0 +1,842 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy-Medium";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+
+#main #loader {
+    user-select: none;
+    /* display: none; */
+    z-index: 99999;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #161616;
+    color: white;
+}
+
+#loader #top-heading {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+#top-heading h5 {
+    text-align: center;
+    font-size: 1.5vh;
+    font-weight: 100;
+}
+
+#loader h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    font-weight: 300;
+    /* background-color: red; */
+}
+
+#loader #sharma {
+    font-family: "MAZIUS REVIEW 20.09";
+    color: #15CF93;
+}
+
+#loader .opa {
+    opacity: 1;
+}
+
+.reveal .parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.reveal .parent .child {
+    display: block;
+}
+
+.parent .child span {
+    display: inline-block;
+}
+
+#green {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    height: 0vh;
+    background-color: #15CF93;
+    z-index: 9999;
+}
+
+#main #home {
+    /* position: relative; */
+    user-select: none;
+    width: 100%;
+    min-height: 150vh;
+    background-color: #FCFAF8;
+    
+}
+
+#home #nav {
+    /* position: fixed;
+    z-index: 99999; */
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 0 5vw;
+}
+
+ #nav a {
+    text-decoration: none;
+    color: #383838;
+    font-size: 1.6vh;
+    font-weight: 100;
+}
+
+#nav a .line {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1px;
+    background-color: #383838;
+
+
+}
+
+#line1 {
+    left: 0;
+    width: 0%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: 0.1s;
+}
+
+#line2 {
+    right: 0;
+    width: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#nav a:hover #line2 {
+    width: 0%;
+}
+
+#nav a:hover #line1 {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 4.5vw;
+    padding: 0vw 5vw;
+    justify-content: space-between;
+    /* background-color: red; */
+    line-height: 1;
+}
+
+.row h1 {
+    margin-top: -1vw;
+    letter-spacing: -4px;
+    font-size: 13vw;
+    font-weight: 100;
+    color: #383838;
+}
+
+.text {
+    margin-top: -5vw;
+    margin-right: 3vw;
+}
+
+.text h5 {
+    opacity: 0.6;
+    color: #A2A2A2;
+    font-size: 1.5vh;
+}
+
+.text h5 #for {
+    font-family: "MAZIUS REVIEW 20.09";
+}
+
+.row:nth-child(3) {
+    margin-top: 0;
+}
+
+.row>img {
+    margin-top: 4vw;
+}
+
+.row svg {
+    height: 16vh;
+    margin-left: 7vw;
+    /* background-color: #15CF93; */
+}
+
+path,
+polyline {
+    stroke: #15CF93;
+}
+
+#imagery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30vw;
+    width: 100%;
+    padding: 5vw 7vw;
+}
+
+#imglef {
+    width: 35%;
+    height: auto;
+}
+
+#imglef h1 {
+    font-size: 2.9vw;
+    font-weight: 200;
+    color: #414141;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+#imglef h1 span {
+    /* font-size: 2.7vw; */
+    font-family: "MAZIUS REVIEW 20.09";
+    /* font-style: italic; */
+    color: #15CF93;
+}
+
+#imgrig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    height: 300px;
+    z-index: 99;
+}
+
+#imgrig .imgcntnr {
+    position: absolute;
+    width: 29vw;
+    height: 45vw;
+    border-radius: 2vw;
+    filter: grayscale();
+    transition: al cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#imgrig .imgcntnr:hover {
+    filter: grayscale(0);
+}
+
+#imgrig .imgcntnr:nth-child(1) {
+    transform: translate(-15%, 0%) rotate(-20deg);
+    background-image: url(https://abhishekjha.me/card1.a0552dbc.png);
+    bottom: -10%;
+    left: -5%;
+    background-size: cover;
+    background-position: center;
+}
+
+#imgrig .imgcntnr:nth-child(2) {
+    transform: translate(-15%, 0%) rotate(-15deg);
+    background-image: url(https://abhishekjha.me/card2.cfc820ab.png);
+    bottom: -35%;
+    left: 15%;
+    background-size: cover;
+    background-position: center;
+}
+
+#imgrig .imgcntnr:nth-child(3) {
+    transform: translate(-15%, 0%) rotate(-5deg);
+    background-image: url(https://abhishekjha.me/card3.b705d81b.png);
+    /* bottom: 0%; */
+    left: 40%;
+    background-size: cover;
+    background-position: center;
+}
+
+#help {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    background-color: #F2F2F2;
+}
+
+#help::before {
+    content: " ";
+    top: -75px;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    transform: rotate(-180deg);
+    background-image: url("https://abhishekjha.me/rip.f6d7c4dd.svg");
+    background-size: cover;
+}
+
+#help svg {
+    /* font-size: 3vw; */
+    margin-top: -15vw;
+    margin-left: 5vw;
+}
+
+#help svg path {
+    stroke: rgba(65, 65, 65, .3);
+}
+
+#help-cntnt {
+    width: 50%;
+    margin-left: -10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    padding: 0vw 10vw;
+}
+
+#help-cntnt h3 {
+    font-size: 1vw;
+    font-weight: 100;
+    color: #A2A2A2;
+}
+
+#help-cntnt h3 span {
+    font-family: "MAZIUS REVIEW 20.09";
+}
+
+#help-cntnt h1 {
+    font-size: 1.6vw;
+    font-weight: 100;
+    color: #414141;
+}
+
+#help-line {
+    position: absolute;
+    background-color: #A2A2A2;
+    height: 1px;
+    width: 78%;
+    bottom: 10%;
+    left: 18%;
+}
+
+#work {
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 70vh;
+    background-color: #F2F2F2;
+}
+
+.work-row {
+    margin-bottom: 5vw;
+    width: 100%;
+    height: 9vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+.work-row h1 {
+    display: flex;
+    align-items: baseline;
+    margin-left: 17vw;
+    font-size: 10vw;
+    font-weight: 400;
+    color: #383838;
+}
+
+
+.work-row h1 span {
+    color: #15CF93;
+    font-family: "MAZIUS REVIEW 20.09";
+}
+
+.work-row h1 .mini {
+    margin-left: 2vw;
+    font-size: 1.5vw;
+    font-weight: 200;
+}
+
+
+#work svg {
+    width: 5vw;
+    margin-right: 10vw;
+    transform: rotate(90deg);
+}
+
+#work svg path {
+    stroke: rgba(65, 65, 65, .3);
+}
+
+#images {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5vw 5vw;
+    /* margin-top: 10vw; */
+    /* background-color: red; */
+    position: relative;
+    width: 100%;
+}
+
+.cnt {
+    overflow: hidden;
+    border-radius: 3vw;
+}
+
+.cnt1 {
+    width: 35%;
+}
+
+.cnt2 {
+    width: 35%;
+    margin-right: 5vw;
+}
+
+.cnt1 img {
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    width: 105%;
+}
+
+.cnt2 img {
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    width: 105%;
+}
+
+#cursor {
+    position: fixed;
+    width: 20vw;
+    min-height: 16vw;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    /* background-color: red; */
+}
+
+#cursor>div {
+    pointer-events: none;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    opacity: 0;
+    position: absolute;
+}
+
+#cursor #elem {
+    width: 100%;
+    position: relative;
+}
+
+#cursor .crow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5vw;
+    gap: 1vw;
+}
+
+.crow .ccircle {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.crow .ccapsule {
+    padding: 0.5vw 3vw;
+    background-color: #FCFAF8;
+    border-radius: 2VW;
+}
+
+#elem img {
+    width: 100%;
+    opacity: 0;
+    animation: an 4s linear infinite;
+    position: absolute;
+}
+
+#elem img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#elem img:nth-child(3) {
+    animation-delay: 2s;
+}
+
+#elem img:nth-child(4) {
+    animation-delay: 3s;
+}
+
+#elem img:nth-child(5) {
+    animation-delay: 4s;
+}
+
+@keyframes an {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    21% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#let-discuss {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 110vh;
+    background-color: #253C39;
+}
+
+#discuss-top {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    /* background-color: rgba(255, 0, 0, 0.309); */
+
+}
+
+#dis-ttop svg {
+    position: absolute;
+    left: 6vw;
+    margin-top: 12vw;
+}
+
+#dis-ttop svg path {
+    stroke: white;
+}
+
+#dis-ttop {
+    line-height: 0.95;
+    padding: 5vw 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#dis-ttop h1 {
+    font-size: 6vw;
+    font-weight: 400;
+}
+
+#dis-tbtm {
+    padding: 2vw 6vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dis-ttbtm {
+    z-index: 9999;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vw;
+    height: 7vw;
+    width: 48%;
+    border: 1px solid white;
+}
+
+.DTL{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    position: absolute;
+    bottom: 100%;
+    height: 100%;
+    width: 100%;
+    background-color:#ffffff8c;
+}
+
+.dis-ttbtm a{
+    z-index: 99;
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vh;
+    font-weight: 900;
+}
+
+#discuss-btm {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 7vw 5vw;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+}
+
+.social-links{
+    overflow: hidden;
+    z-index: 9999;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #15CF93; */
+    width: 20%;
+    height: 6vw;
+    padding: 1vw;
+}
+
+.social-bgcolor{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    bottom: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #15CF93;
+}
+
+.social-cntnt{
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1vw;
+}
+.social-cntnt a{
+    font-size: 2vw;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+.social-cntnt h5{
+    font-weight: 100;
+    color: #A7B1B0;
+}
+
+.social-icon{
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#white-circle{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vw;
+    width: 90vw;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 500px) {
+    #main #loader {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    #loader #top-heading {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+    }
+    
+    #top-heading h5 {
+        text-align: center;
+        font-size: 1.5vh;
+        font-weight: 100;
+    }
+
+    #home{
+        overflow: hidden;
+    }
+
+    #nav a{
+        font-size: 2.5vw;
+    }
+
+    .text{
+        display: none;
+    }
+
+    .row h1 {
+        margin-left: -5vw;
+        font-size: 20vw;
+    }
+
+    .r1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .row>img {
+        display: none;
+    }
+
+    .row svg {
+        margin-left: -35vw;
+        height: 9vh;
+    }
+
+    .r1>h1 {
+        margin-left: 20vw;
+    }
+    #imagery {
+        margin-top: 10vw;
+        width: 100vw;
+        padding: 0vw 2vw;
+    }
+    #imglef h1 {
+        font-size: 3.2vw;
+    }
+    #imgrig .imgcntnr:nth-child(3) {
+        transform: translate(-15%, 0%) rotate(-20deg);
+    }
+
+    #imgrig .imgcntnr:nth-child(2) {
+        transform: translate(-15%, 0%) rotate(-31deg);
+        bottom: 25%;
+        left: 20%;
+    }
+
+   #imgrig .imgcntnr:nth-child(1) {
+        transform: translate(-15%, 0%) rotate(-33deg);
+        bottom: 33%;
+        left: -3%;
+    }
+    #help::before {
+        height: 100px;
+    }
+    #help {
+        min-height: 25vh;
+    }
+    #help svg {
+        margin-top: -15vw;
+        margin-left: 3vw;
+        width: 20vw;
+        height: 20vw;
+    }
+    #help-cntnt h1 {
+        font-size: 2.6vw;
+    }
+    #help-cntnt h3 {
+        font-size: 2vw;
+    }
+
+    #help-cntnt {
+        width: 100%;
+    }
+    #help-line {
+        position: absolute;
+        background-color: #A2A2A2;
+        height: 1px;
+        width: 90%;
+        bottom: -10%;
+        left: 5%;
+    }
+    #work {
+        min-height: 50vh;
+    }
+    .cnt1 {
+        width: 60%;
+    }
+    .cnt2 {
+        width: 25%;
+    }
+    #let-discuss {
+        overflow: hidden;
+        min-height: 60vh;
+    }
+    #discuss-top {
+        height: 65%;
+    }
+    #dis-ttop h1 {
+        font-size: 11vw;
+    }
+    #dis-ttop svg {
+        margin-top: 48vw;
+    }
+    #dis-tbtm {
+        margin-top: 15vw; 
+    }
+    .dis-ttbtm a {
+        font-size: 1.5vh;
+    }
+    #discuss-btm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-evenly;
+        gap: 10px; 
+    }
+    .social-links {
+        width: 100%;
+        height: 100%;
+    }
+    .social-cntnt a {
+        font-size: 6vw;
+    }
+
+    .social-icon {
+        height: 10.5vw;
+        width: 10.5vw;
+    }
+    #white-circle {
+        height: 150vw;
+        width: 150vw;
+    }
+
+
+    
+  }
